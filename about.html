@@ -11,7 +11,7 @@
             font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,25 +20,6 @@
             background-color: #fff;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
-        }
-
-        .logo-container {
-            width: 20%;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            font-size: 2em;
-            margin: 20px;
-            color: #333;
-        }
-
-        .link {
-            font-size: 1em;
-            color: inherit;
-            text-decoration: none;
-            margin-top: 20px;
-            display: block;
         }
 
         .icon-container {
@@ -71,14 +52,6 @@
             transform: rotate(90deg);
         }
 
-        .icon-container.open span:nth-child(1) {
-            transform: rotate(45deg);
-        }
-
-        .icon-container.open span:nth-child(2) {
-            transform: rotate(-45deg);
-        }
-
         .menu-overlay {
             position: fixed;
             top: 0;
@@ -103,6 +76,14 @@
             margin: 20px 0;
             color: inherit;
             text-decoration: none;
+        }
+
+        .icon-container.open span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .icon-container.open span:nth-child(2) {
+            transform: rotate(-45deg);
         }
 
         .icon-container.open + .menu-overlay {
@@ -132,18 +113,37 @@
             background-color: #fff;
         }
 
+        .logo-container {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
         .logo-container img {
             width: 100%;
             height: auto;
+        }
+
+        .content {
+            font-size: 2em;
+            margin: 20px;
+            color: #333;
+        }
+
+        .link {
+            font-size: 1em;
+            color: inherit;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-<div class="icon-container" id="icon-container">
+<nav class="icon-container" id="icon-container">
     <span></span>
     <span></span>
-</div>
+</nav>
 
 <div class="menu-overlay" id="menu-overlay">
     <div class="menu-content">
